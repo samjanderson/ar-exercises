@@ -7,4 +7,13 @@ require_relative './exercise_4'
 puts "Exercise 5"
 puts "----------"
 
-# Your code goes here ...
+# 3. Output the number of stores that are generating $1M or more in annual sales. 
+# **Hint:** Chain together `where` and `size` (or `count`) Active Record methods.
+
+@sum = Store.sum(:annual_revenue)
+@average = Store.average(:annual_revenue)
+@big_revenue=  Store.where("annual_revenue > 1000000").count
+
+puts @sum
+puts @average
+puts @big_revenue
