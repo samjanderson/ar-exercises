@@ -15,5 +15,5 @@ puts "----------"
 @store2 = Store.find(2)
 
 #alternate way to update
-@store1.name = "Yaletown"
+@store1.name = "Kitsilano"
 @store1.save
